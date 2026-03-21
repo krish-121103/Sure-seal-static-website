@@ -1,0 +1,61 @@
+/* Mobile Fixes for Sure Seal Website */
+
+/* Prevent horizontal scroll */
+html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    position: relative !important;
+}
+
+/* Force visibility of WOW.js elements if they fail to animate on mobile */
+@media (max-width: 767px) {
+    .wow {
+        visibility: visible !important;
+        opacity: 1 !important;
+        animation-name: none !important;
+        transition: none !important;
+    }
+    
+    /* Revolution Slider visibility fixes */
+    .rev_slider_wrapper, 
+    .rev_slider, 
+    .tp-revslider-mainul, 
+    .tp-revslider-slidesli {
+        visibility: visible !important;
+        opacity: 1 !important;
+        display: block !important;
+    }
+
+    /* Ensure the hero section doesn't collapse */
+    .small-screen {
+        min-height: 350px !important;
+    }
+
+    /* Scaling down large headers */
+    h1, .text-extra-large { font-size: 32px !important; line-height: 38px !important; }
+    h2 { font-size: 28px !important; line-height: 34px !important; }
+    h3 { font-size: 24px !important; line-height: 30px !important; }
+    h4 { font-size: 22px !important; line-height: 28px !important; }
+    h5 { font-size: 20px !important; line-height: 26px !important; }
+    
+    .line-height-50 { line-height: 35px !important; }
+    .line-height-45 { line-height: 30px !important; }
+
+    /* Fix image overlap or disappearing content */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Add safety padding to the edges */
+    section, .container, .container-fluid {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    /* Fix footer overlapping */
+    footer {
+        padding-top: 40px !important;
+        padding-bottom: 20px !important;
+    }
+}
